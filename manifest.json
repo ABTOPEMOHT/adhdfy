@@ -1,0 +1,14 @@
+{
+  "name": "ADHDfy",
+  "description": "Turn your Spotify client into a beautifully chaotic visual playground.",
+  "preview": "spreview.gif",
+  "main": "adhdfy.js",
+  "readme": "README.md",
+  "authors": [
+    {
+      "name": "АВТОРЕМОНТ",
+      "url": "https://github.com/ABTOPEMOHT"
+    }
+  ],
+  "tags": ["fun", "customization", "gifs", "ui", "spicetify"]
+}
