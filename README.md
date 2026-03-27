@@ -42,5 +42,7 @@ Once installed, a new icon appears in the top bar. Click it and the ADHDfy menu 
 - Each image or GIF also has its own Effects panel where you can add motion, color effects and special behaviors to make some chaos.
 - You can also export your current setup as a `.json` layout and share it with friends, or import it later!
 
+![Menu](adhd_settings.png)
+
 ## About
 handcrafted with love by [АВТОРЕМОНТ](https://github.com/ABTOPEMOHT).
