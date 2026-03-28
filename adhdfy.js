@@ -51,7 +51,7 @@
         document.head.appendChild(style);
     }
 
-    console.log("ADHDfy v7.72 loaded!");
+    console.log("ADHDfy 7.72 loaded");
 
     let savedGifs = JSON.parse(Spicetify.LocalStorage.get("MyCustomGifs") || "[]").map(gif => ({
         ...gif,
@@ -361,8 +361,8 @@
     let lastTime = performance.now();
     function trackAnchors(timestamp, isSyncUpdate = false) {
         if (!timestamp) timestamp = performance.now();
-        let dt = (timestamp - lastTime) / (1000 / 60); 
-        if (dt > 3) dt = 3; 
+        let dt = (timestamp - lastTime) / (1000 / 60);
+        if (dt > 3) dt = 3;
         if (dt < 0) dt = 0;
         lastTime = timestamp;
 
@@ -620,7 +620,7 @@
     presetButtons.style.display = "flex";
     presetButtons.style.gap = "10px";
 
-    const exportBtn = createStyledButton("Export", "var(--spice-button)", "#000");
+    const exportBtn = createStyledButton("Save", "var(--spice-button)", "#000");
     exportBtn.onclick = () => {
         const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(savedGifs, null, 2));
         const dlAnchorElem = document.createElement('a');
@@ -632,7 +632,7 @@
         showCustomNotification("Layout Exported!");
     };
 
-    const importBtn = createStyledButton("Import", "var(--spice-button)", "#000");
+    const importBtn = createStyledButton("Load", "var(--spice-button)", "#000");
     const fileInput = document.createElement("input");
     fileInput.type = "file";
     fileInput.accept = ".json";
@@ -1821,7 +1821,7 @@
 
                         data.results.forEach(item => {
                             const img = document.createElement("img");
-                            img.src = item.media[0].tinygif.url;
+                            img.src = item.media[0].tinygif.url; // Use tinygif for extremely fast UI 
                             img.style.width = "100%";
                             img.style.height = "80px";
                             img.style.objectFit = "cover";
